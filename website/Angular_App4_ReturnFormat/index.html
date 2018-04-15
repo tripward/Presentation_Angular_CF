@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="/assets/angular/angular.min.js"></script>
+</head>
+<body>
+	<script>
+		var app = angular.module( "favoriteMusic", [] ); 
+
+		app.controller( "musicController", function($scope, $http) 
+		{
+			$scope.aryMusic	= [];
+
+			$scope.setGenre = function( genrePassedIn ) 
+			{
+				var _url = "MusicUtils.cfc?method=getMusic&genre=" + genrePassedIn;
+				_url    += "&returnformat=json";
+
+				$http.get( _url ).then( function( response ) 
+			    {
+			        $scope.aryMusic = response.data;
+			    });
+		    };
+		});
+	</script>
+
+	<div ng-app="favoriteMusic">
+		<div ng-controller="musicController">
+			<button ng-click="setGenre( 'rap' );">Rap</button>
+			<button ng-click="setGenre( 'electronic' );">Electronic</button>
+			<button ng-click="setGenre( 'sacramento' );">Local to Sacramento</button>
+			<button ng-click="setGenre( 'metal' );">Metal</button>
+			<button ng-click="setGenre( '' );">No Preference</button>
+
+			<h2>Favorite Music</h2>
+			<ul>
+		    	<li ng-repeat="m in aryMusic">{{m}}</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

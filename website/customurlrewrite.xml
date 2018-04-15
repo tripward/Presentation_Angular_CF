@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN" "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">
+<urlrewrite>
+	<rule>
+		<note>Generic Front-Controller URLs</note>
+
+		<!-- HACK! to make the Taffy API URI's work until I can fix the regex bug I have -->
+<!--		<from>/api/hello</from>
+		<to type="passthrough">/api/index.cfm/hello</to>
+
+		<from>/api/musician</from>
+		<to type="passthrough">/api/index.cfm/musician</to>
+
+		<from>/api/book</from>
+		<to type="passthrough">/api/index.cfm/book</to>
+
+		<from>/api/movie</from>
+		<to type="passthrough">/api/index.cfm/movie</to>
+-->
+		<from>/api/(.+?)</from>
+		<to type="passthrough">/api/index.cfm/$1</to>	
+	</rule>
+</urlrewrite>
+
