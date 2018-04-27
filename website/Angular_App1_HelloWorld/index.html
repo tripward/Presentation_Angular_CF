@@ -12,13 +12,15 @@
 		app.controller( "musicController", function($scope) 
 		{
 		    $scope.aryMusic = [ "Depeche Mode", "David Bowie", "7 Seconds", "Green Day", "The Beatles" ];
+		    
 		});
 	</script>
 
 	<div ng-app="favoriteMusic" ng-controller="musicController">
+		
 		<h2>Favorite Music</h2>
 		<ul>
-	    	<li ng-repeat="m in aryMusic">{{m}}</li>
+	    	<li ng-repeat="band in aryMusic">{{band}}</li>
 		</ul>
 	</div>
 

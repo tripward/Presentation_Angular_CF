@@ -23,10 +23,9 @@
 				color: green;
 			}
 			
-			.note
+			div.note
 			{ 
-				font-size: 9px;
-				<!---color: yellow;--->
+				font-size: 7px;
 			}
 
 			.align-left
@@ -44,17 +43,24 @@
 				</section>
 
 				<section>
-					<h2>About Trip</h2>
+					<h2>About Me</h2>
 					<ul>
-						<li>Senior technical Specialist at ICF</li>
+						<li>Senior Technical Specialist at ICF</li>
 						<li>Owner &amp; Chief Consultant at Trir Software
 							<ul>
 								<li>Software Architecture and Development</li>
 							</ul>
 						</li>
 						<li>ColdFusion(1998),  Java, jQuery,  HTML5, SQL, etc...</li>
-						<li>Memember of Northern Virginia CF User Group</li>
-						<li>"Borrowed" Code Samples from <span style="font-weight: bold;">Nolan Erck</span></li>
+						<li>Member of Northern Virginia CF User Group</li>
+						
+					</ul>
+				</section>
+				
+				<section>
+					<h2>About Nolan Erck</h2>
+					<ul>
+						<li>Code Samples from <span style="font-weight: bold;">Nolan Erck</span></li>
 						<ul>
 							<li>Owner &amp; Chief Consultant at South of Shasta
 								<ul>
@@ -64,22 +70,17 @@
 							<li>OpenTable, ZenDesk, Turn It In, AcademyX, HackerLab</li>
 							<li>ColdFusion, C++, Java, jQuery, PHP, .NET, HTML5, Android, SQL, etc...</li>
 							<li>Manager, SacInteractive User Group</li>
+							<li>Music Super Freak!</li>
 						</ul>
 					</ul>
 				</section>
 
-				<section data-background-image="./images/cd_shelf.png">
-				</section>
-
-				<section data-background-image="./images/vinyl_shelf.png">
-				</section>
-
-				<section data-background-image="./images/charlie_brown.png" data-background-size="contain">
-				</section>
+				<!--section data-background-image="./images/charlie_brown.png" data-background-size="contain">
+				</section>-->
 
 				<section>
 					<h2>Slide deck and code samples are here:</h2>
-					<p>github.com/nolanerck<br />angularjs-and-cfml-preso</p>
+					<p>https://github.com/tripward/Presentation_Angular_CF<br />Presentation_Angular_CF</p>
 				</section>
 
 				<section>
@@ -105,7 +106,7 @@
 				<section>
 					<h2>You're all in the right place</h2>
 					<ul>
-						<li>You don't <em>have</em> to use API Manager, but you <em>want</em> to monitor you API.</li>
+						<li>You don't <em>have</em> to use API Manager, but you <em>want</em> to monitor you.</li>
 						<li>You don't <em>have</em> to have proper MVC code.</li>
 						<li>You don't <em>have</em> to have be full OOP to deliver clean API response, but it is easier...</li>
 						<li>You don't <em>have</em> to have be an Angular guru to start.</li>
@@ -131,6 +132,8 @@
 						<li>Just a bunch of URLs</li>
 						<li>The URLs return data to whatever system requested it</li>
 						<li>Data comes back (hopefully!) in a standard format: XML, SOAP, JSON, etc</li>
+						<li>Stateless</li>
+						<li>Abstraction of complexity</li>
 					</ul>
 				</section>
 
@@ -157,15 +160,22 @@
 				</section>
 
 				<section>
+
 					<h2>REST API</h2>
 					<ul>
-						<li>http://sitename/api/user/123 (get)</li>
-						<li>http://sitename/api/user/123 (create)</li>
-						<li>http://sitename/api/user/123 (update)</li>
-						<li>http://sitename/api/user/123 (delete)</li>
+						<li>http://sitename/api/user/123 (GET, POST, PUT, DELETE)</li>
 						<li>The <em>same</em> URL for all actions.</li>
 						<li>Change the HTTP verb to change the behavior.</li>
 					</ul>
+					
+					<h2>Verbs</h2>
+					<ul>
+						<li>POST = Create, 201 (Created)</li>
+						<li>GET	 = Read, 200 (OK)</li>
+						<li>PUT	 = Update/Replace, 200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.</li>
+						<li>DELETE	 = Delete, 200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.</li>
+					</ul>
+						
 					<div class="note">Note- If using ColdBox/FW1 4 and utilizing routes you may also use your browser to debug.</div>
 				</section>
 
@@ -178,7 +188,6 @@
 								<li>http://sitename/api/user/123 (get)</li>
 							</ul>
 						</li>
-						
 						<li>REST is the current "standard".</li>
 						<li>But under the hood, your code does the same "thing" either way.</li>
 					</ul>
@@ -205,13 +214,14 @@
 							<li>The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.</li>
 							<li>The ng-bind directive binds application data to the HTML view.</li>
 						</ul>
+						
 					</ul>
 				</section>
 
 				<section>
 					<p><a href="/Angular_App1_HelloWorld" target="_blank">Your first AngularJS app</a></p>
 				</section>
-
+				
 				<section>
 					<p><a href="/Angular_App2_BasicCFM" target="_blank">Angular + Basic CFM template</a></p>
 				</section>
@@ -228,19 +238,24 @@
 					<p><a href="/Angular_App5_Routes" target="_blank">Angular Routes</a></p>
 				</section>
 
-				<section>
+				<!--<section>
 					<p><a href="/api">Taffy</a></p>
-				</section>
+				</section>-->
 
-				<section>
+				<!--<section>
 					<p><a href="/api">AngularJS + Taffy</a></p>
+				</section>-->
+				
+				<section>
+					<p><a href="/Angular_App7_RESTful" target="_blank">Your first RESTful AngularJS app</a></p>
 				</section>
 
 				<section>
 					<h2>Other info</h2>
 					<ul>
-						<li>Don't have to "configure" Taffy to use Angular. It "just works".</li>
-						<li>Don't have to "configure" AngularJS to use Taffy/CFML. It "just works".</li>
+						<!--<li>Don't have to "configure" Taffy to use Angular. It "just works".</li>-->
+						<!--<li>Don't have to "configure" AngularJS to use Taffy/CFML. It "just works".</li>-->
+						<li>Don't have to "configure" AngularJS to use CFML. It "just works".</li>
 						<li>CF just knows something requested a URL.</li>
 						<li>AngularJS just knows it got back some JSON from a URL.</li>
 						<li>It all "just works".</li>
@@ -251,12 +266,22 @@
 				<section>
 					<h2>Other info</h2>
 					<ul>
-						<li>Taffy works on all versions of CF from 8 thru 2016</li>
-						<li>ColdBox REST is another great option for REST APIs.
+						<li>ColdBox REST is great option for REST APIs.
 							<br />
 							Talk to the Ortus folks for more details. Or better yet, attend Into The Box 2018!
 						</li>
 						<li>ColdBox REST also "just works" with any JavaScript framework. No config needed.</li>
+						<li>FW1 v4 supports REST routing out of the box.</li>
+						<li>Taffy is a ColdFusion WebService framework allowing simple remote access calls and self documentation. Works on all versions of CF from 8 thru 2016</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>v1.x -> v2 -> v4 </h2>
+					<ul>
+						<li>v1.7 - input type="text" ng-model="name"</li>
+						<li>v2 - input [(ngModel)]="username" </li>
+						<li>v4 - input [(ngModel)]="username"</li>
 					</ul>
 				</section>
 
@@ -275,7 +300,9 @@
 						<li>South of Shasta - onsite and remote training</li>
 						<li>"Object-Oriented Programming in ColdFusion" by Matt Gifford</li>
 						<li>docs.angularjs.org</li>
+						<li>ColdBox Relax</li>
 						<li>docs.taffy.io</li>
+						<li>Swagger</li>
 						<li>Talk to people at the conference!</li>
 					</ul>
 				</section>

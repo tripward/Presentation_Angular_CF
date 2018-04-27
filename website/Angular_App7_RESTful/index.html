@@ -11,21 +11,25 @@
 
 		app.controller( "myController", function($scope, $http) 
 		{
-		    $http.get( "favoriteMusic.cfm?genre=electronic" ).then(function(response) 
+		    $http.get( "https://cwigapis.icfiweb.com/api/v1/relatedLists/26&DC" ).then(function(response) 
 		    {
-		        $scope.aryMusic = response.data;
+		        $scope.list = response.data;
 		    });
-		    
 		});
 	</script>
 
 	<div ng-app="favoriteStuff">
 		<div ng-controller="myController">
+			<div ng-bind="greeting"></div>
+			<div ng-bind="greeting.id"></div>
+			<div ng-bind="greeting.content"></div>
 			
-			<h2>Favorite Electronic Music</h2>
+			<div ng-bind="list.LISTCONFIGURATION.RESOURCES"></div>
+			
 			<ul>
-		    	<li ng-repeat="band in aryMusic">{{band}}</li>
+		    	<li ng-repeat="item in list.lists">{{item}}</li>
 			</ul>
+
 		</div>
 	</div>
 </body>
